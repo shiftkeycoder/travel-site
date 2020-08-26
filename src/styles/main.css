@@ -1,0 +1,25 @@
+/* ---BOOTSTRAP STYLE RULES--- */
+@import "bootstrap";
+
+/* ---GOOGLE FONTS--- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ---GLOBAL STYLE RULES--- */
+@import "normalize.css";
+@import "base/_var";
+@import "base/_macro";
+@import "base/_global";
+
+/* ---FONTAWESOME STYLE RULES--- */
+@import "fonts/all";
+@import "fonts/brands";
+@import "fonts/duotone";
+@import "fonts/fontawesome";
+@import "fonts/light";
+@import "fonts/regular";
+@import "fonts/solid";
+@import "fonts/svg-with-js";
+@import "fonts/v4-shims";
+
+/* ---CUSTOM STYLE RULES--- */
+

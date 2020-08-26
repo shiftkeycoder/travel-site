@@ -1,0 +1,153 @@
+{
+	"header": {
+		"title": "ShiftKeyCoder",
+		"link": [ "Workspace", "Front-end", "Back-end", "Deployment" ],
+		"pg1": {
+			"git": {
+				"ref": "#git",
+				"text": "Git"
+			},
+			"node": {
+				"ref": "#nodejs",
+				"text": "NodeJS"
+			},
+			"vscode": {
+				"ref": "#vscode",
+				"text": "Visual Studio Code"
+			},
+			"auto": {
+				"ref": "#automation",
+				"text": "Automation"
+			}
+		}
+	},
+	"hero": {
+		"title": "Freelance Web Development",
+		"author": "Caleb D. Henderson",
+		"about": "I design and devlop experiences that make people's lives simple!",
+		"btn": "Get Started"
+	},
+	"nav": {
+		"alert": "Select a topic to begin"
+	},
+	"return": {
+		"text": "Return to main page",
+		"icon": "fad fa-house-return"
+	},
+	"article": {
+		"icon": "fad fa-medal"
+	},
+	"pg1": {
+		"header": "Setting up the workspace",
+		"ref": [ "#git", "#nodejs", "#vscode", "#automation" ],
+		"id": [ "git", "nodejs", "vscode", "automation" ],
+		"topic": [ "Git", "NodeJS", "Visual Studio Code", "Automation" ],
+		"asset1": {
+			"topic": [ "Installing Git", "Configuring Git" ],
+			"ref": "https://git-scm.com/",
+			"refText": "git-scm.com",
+			"icon": "fab fa-git-alt"
+		},
+		"asset2": {
+			"topic": "Installing NodeJS",
+			"ref": "https://nodejs.org/en/",
+			"refText": "NodeJS",
+			"icon": "fab fa-node-js"
+		},
+		"asset3": {
+			"topic": [
+				"Downloading vscode",
+				"Setting Themes",
+				"Setting Icons",
+				"Using Font Ligatures",
+				"Key Mappings"
+			],
+			"ref": "https://code.visualstudio.com/download",
+			"refText": "Visual Studio Code",
+			"icon": "fad fa-code"
+		},
+		"asset4": {
+			"topic": [ "Webpack", "CSS", "JavaScript", "VueJS" ],
+			"tag": [ "#webpack", "#css", "#javascript", "#vuejs" ],
+			"webpack": {
+				"ref": [
+					"https://www.npmjs.com/package/webpack",
+					"https://www.npmjs.com/package/webpack-cli",
+					"https://www.npmjs.com/package/webpack-dev-server"
+				],
+				"text": [ "webpack", "webpack-cli", "webpack-dev-server" ]
+			},
+			"css": {
+				"ref": [
+					"https://www.npmjs.com/package/style-loader",
+					"https://www.npmjs.com/package/css-loader",
+					"https://www.npmjs.com/package/postcss-loader",
+					"https://www.npmjs.com/package/postcss-import",
+					"https://www.npmjs.com/package/postcss-mixins",
+					"https: //www.npmjs.com/package/postcss-simple-vars",
+					"https://www.npmjs.com/package/postcss-nested",
+					"https://www.npmjs.com/package/postcss-hexrgba",
+					"https://www.npmjs.com/package/autoprefixer"
+				],
+				"text": [
+					"style-loader",
+					"css-loader",
+					"postcss-loader",
+					"postcss-import",
+					"postcss-mixins",
+					"postcss-simple-vars",
+					"postcss-nested",
+					"postcss-hexrgba",
+					"autoprefixer"
+				],
+				"focus": [ "Loaders", "Plugins", "Configuration" ]
+			},
+			"js": {
+				"ref": [
+					"https://www.npmjs.com/package/@babel/core",
+					"https://www.npmjs.com/package/@babel/preset-env",
+					"https://www.npmjs.com/package/babel-loader"
+				],
+				"text": [
+					"@babel/core",
+					"@babel/preset-env",
+					"babel-loader"
+				]
+			},
+			"vue": {
+				"ref": [
+					"https://www.npmjs.com/package/@babel/core",
+					"https://www.npmjs.com/package/@babel/preset-env",
+					"https://www.npmjs.com/package/babel-loader"
+				],
+				"text": [
+					"@babel/core",
+					"@babel/preset-env",
+					"babel-loader"
+				]
+			},
+			"icon": [ "fad fa-tasks-alt", "fad fa-asterisk" ]
+		},
+		"icon": [
+			"fad fa-tasks-alt",
+			"fad fa-asterisk"
+		]
+	},
+	"pg2": {
+		"header": "The Front-end",
+		"topic": [ "Topic1", "Topic2", "Topic3", "Topic4" ]
+	},
+	"pg3": {
+		"header": "The Back-end",
+		"topic": [ "Topic1", "Topic2", "Topic3", "Topic4" ]
+	},
+	"pg4": {
+		"header": "Deployment",
+		"topic": [ "Topic1", "Topic2", "Topic3", "Topic4" ]
+	},
+	"footer": {
+		"brand": "ShiftKeyCoder",
+		"author": "Caleb D. Henderson",
+		"year": "2020"
+	}
+}
