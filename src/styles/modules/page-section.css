@@ -1,0 +1,38 @@
+.page-section{
+  padding: 1.2rem 0;
+
+  @mixin tablet_XD{
+    padding: 4.5rem 0;
+  }
+
+  &--blue{
+    background-color: $blue;
+    color: #FFF;
+  }
+
+  &--testimonials{
+    background-color: #E0E6EF;
+
+    @mixin laptop{
+      background: url(../../../images/testimonials-bg.jpg) top center no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  &--no-b-padding-until-medium{
+    padding-bottom: 0;
+
+    @mixin tablet_XD{
+      padding-bottom: 4.5rem;
+    }
+  }
+
+  &--no-b-padding-until-large{
+    padding-bottom: 0;
+
+    @mixin laptop{
+      padding-bottom: 4.5rem;
+    }
+  }
+}

@@ -6,20 +6,6 @@
 
 /* ---GLOBAL STYLE RULES--- */
 @import "normalize.css";
-@import "base/_var";
-@import "base/_macro";
-@import "base/_global";
-
-/* ---FONTAWESOME STYLE RULES--- */
-@import "fonts/all";
-@import "fonts/brands";
-@import "fonts/duotone";
-@import "fonts/fontawesome";
-@import "fonts/light";
-@import "fonts/regular";
-@import "fonts/solid";
-@import "fonts/svg-with-js";
-@import "fonts/v4-shims";
 
 /* ---CUSTOM STYLE RULES--- */
 

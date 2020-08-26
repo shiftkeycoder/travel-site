@@ -1,8 +1,8 @@
 import Vue from "./Vue";
 import App from "./App.vue";
+
 export default class Engine {
   constructor() {
-    
   }
   hotInject() {
     if (module.hot) {
@@ -15,4 +15,6 @@ export default class Engine {
     render: h => h(App)
     });
   }
+ 
+
 }

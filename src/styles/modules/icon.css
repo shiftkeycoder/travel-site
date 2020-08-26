@@ -1,0 +1,72 @@
+.icon {
+  &--clear-view-escapes {
+    background-image: url(../../../icons/clear-view-escapes.svg);
+    width: 142.1px;
+    height: 60px;
+  }
+  &--comment {
+    width:66px;
+    height:66px;
+    background-image: url(../../../icons/comment.svg);
+  }
+
+  &--facebook {
+    width:23.23px;
+    height:44.01px;
+    background-image: url(../../../icons/facebook.svg);
+  }
+
+  &--fire {
+    width:58px;
+    height:66px;
+    background-image: url(../../../icons/fire.svg);
+  }
+
+  &--globe {
+    width:66px;
+    height:66px;
+    background-image: url(../../../icons/globe.svg);
+  }
+
+  &--instagram {
+    width:44.01px;
+    height:44.01px;
+    background-image: url(../../../icons/instagram.svg);
+  }
+
+  &--mail {
+    width:66px;
+    height:50px;
+    background-image: url(../../../icons/mail.svg);
+  }
+
+  &--rain {
+    width:66px;
+    height:66px;
+    background-image: url(../../../icons/rain.svg);
+  }
+
+  &--star {
+    width:66px;
+    height:66px;
+    background-image: url(../../../icons/star.svg);
+  }
+
+  &--twitter {
+    width:53.78px;
+    height:44.06px;
+    background-image: url(../../../icons/twitter.svg);
+  }
+
+  &--wifi {
+    width:62px;
+    height:66px;
+    background-image: url(../../../icons/wifi.svg);
+  }
+
+  &--youtube {
+    width:36.75px;
+    height:44px;
+   background-image: url(../../../icons/youtube.svg);
+  }
+}

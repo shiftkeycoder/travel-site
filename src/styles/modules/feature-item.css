@@ -1,0 +1,32 @@
+.feature-item{
+  position: relative;
+  padding-bottom: 2.5rem;
+
+  @mixin mobile_LG{
+    padding-left: 94px;
+  }
+
+  &--icon{
+    display: block;
+    margin: 0 auto;
+
+    @mixin mobile_LG{
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &--title{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+    margin-top: 0.7em;
+    text-align: center;
+
+    @mixin mobile_LG{
+      margin-top: 1em;
+      font-size: 1.875rem;
+      text-align: left;
+    }
+  }
+}

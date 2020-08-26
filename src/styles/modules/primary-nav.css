@@ -1,0 +1,58 @@
+.primary-nav {
+  padding-top: 10px;
+
+  @mixin tablet_XD{
+    padding-top: 0;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    @mixin clearfix;
+  }
+
+  li{
+    list-style: none;
+    display: inline-block;
+    padding-right: 7px;
+
+    @mixin tablet_XD{
+      padding-right: 20px;
+      float: left;
+      display: block;
+    }
+  }
+
+  li:last-child{
+    padding-right: 0;
+    @mixin tablet_XD{
+      padding-right: 20px;
+    }
+  }
+
+  a{
+    color:#FFF;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    background-color: rgba($blue, 0.5);
+
+    @mixin tablet_XD{
+      font-size: 1rem;
+      padding: 12px 0;
+      background-color: transparent;
+
+     &.is-current-link{
+       color:#fabb69;
+     }
+    }
+  }
+
+  &--pull-right{
+    @mixin tablet_XD{
+      margin-left: 30%;
+    }
+
+  }
+}
