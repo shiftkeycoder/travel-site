@@ -1,14 +1,14 @@
 <template>
   <section 
     id="testimonials" 
-    class="page-section page-section--no-b-padding-until-large page-section--testimonials lazyload"  
+    class="page-section page-section--no-b-padding-until-large page-section--testimonials"  
     data-matching-link="#testimonials-link">
     <div 
       id="testimonial-waypoint"
       v-waypoint="{ active: true, callback: testimonialWaypoint, options: intersectionOptions }"></div>
     <div class="wrapper wrapper--no-padding-until-large">
       <h2 class="section-title section-title--blue">
-        <span class="icon icon--comment section-title--icon"></span>
+        <span class="icon icon--comment section-title__icon"></span>
             Real <strong>Testimonials</strong></h2>
         <div 
           class="row row--gutters row--gutters-small row--equal-height-at-large row--t-padding generic-content-container"

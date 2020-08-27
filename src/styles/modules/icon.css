@@ -5,8 +5,8 @@
     height: 60px;
   }
   &--comment {
-    width:66px;
-    height:66px;
+    width:64px;
+    height:64px;
     background-image: url(../../../icons/comment.svg);
   }
 
