@@ -3,7 +3,8 @@
     class="site-header"
     :class="{
       'site-header--light': !HEADER_BG,
-      'site-header--dark': HEADER_BG}">
+      'site-header--dark': HEADER_BG,
+      'site-header--is-expanded': mobileMenu}">
     <div class="wrapper">
         <div class="site-header--logo">
           <div class="site-header--logo--graphic icon--clear-view-escapes">
@@ -11,15 +12,20 @@
           </div><!--site header logo graphic-->
         </div><!--site header logo-->
 
-        <div class="site-header--menu-icon">
+        <div 
+          @click="mobileMenuToggle" 
+          class="site-header--menu-icon"
+          :class="{'site-header--menu-icon--close-x': mobileMenu}">
           <div class="site-header--menu-icon--middle">
 
           </div><!--site header menu icon middle-->
         </div><!--site header menu icon-->
 
-        <div class="site-header--menu-content">
+        <div 
+          class="site-header--menu-content"
+          :class="{'site-header--menu-content--is-visible': mobileMenu}">
           <div class="site-header--btn-container">
-            <a @click="openModal" href="#" class="btn open-modal">Get in Touch</a>
+            <a @click="openModal" href="#" class="btn">Get in Touch</a>
           </div><!--btn container-->
           <nav class="primary-nav primary-nav--pull-right">
             <ul>
@@ -48,12 +54,15 @@
     props: ['HEADER_BG'],
     data() {
       return {
-       
+       mobileMenu: false
       }
     },
     methods: {
       openModal() {
         this.$emit('onModal');
+      },
+      mobileMenuToggle() {
+        this.mobileMenu = !this.mobileMenu;
       }
     }
   }
