@@ -2,13 +2,24 @@
   <div>
     <app-header 
       :HEADER_BG="headerBG"
+      :ABOUT_LNK="aboutLink"
+      :FEATURE_LNK="featureLink"
+      :TESTIMONIAL_LNK="testimonialLink"
       @onModal="modal = true"></app-header>
     <app-hero></app-hero>
     <app-about
       @onScrollUp="headerBG = false"
-      @onScrollDown="headerBG = true"></app-about>
-    <app-feature></app-feature>
-    <app-testimonial></app-testimonial>
+      @onScrollDown="headerBG = true"
+      @onE1In="aboutLink = true"
+      @onE1Out="aboutLink = false"
+      ></app-about>
+    <app-feature 
+      @onE2In="featureLink = true"
+      @onE2Out="featureLink = false"
+      ></app-feature>
+    <app-testimonial 
+      @onE3In="testimonialLink = true"
+      @onE3Out="testimonialLink = false"></app-testimonial>
     <app-footer @onModal="modal = true" ></app-footer>
     <app-modal 
       :MODAL="modal"
@@ -48,7 +59,10 @@ export default {
   data() {
     return {
       headerBG : false,
-      modal: false
+      modal: false,
+      aboutLink: false,
+      featureLink: false,
+      testimonialLink: false
      }
   },
   components: {

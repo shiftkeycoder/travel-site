@@ -76,7 +76,11 @@
         if (going === this.$waypointMap.GOING_IN) {
           this.feature.isHidden = false;
           this.feature.isActive = true;
+          this.$emit('onE2In');
         }
+        if (going === this.$waypointMap.GOING_OUT) {
+        this.$emit('onE2Out');
+      }
       }
   }
 }

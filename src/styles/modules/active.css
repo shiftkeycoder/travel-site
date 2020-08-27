@@ -1,0 +1,10 @@
+.active {
+  a {
+    color:$highlight;
+  }
+}
+.inactive {
+  a {
+    color: $light;
+  }
+}

@@ -94,6 +94,12 @@
       if (direction === this.$waypointMap.DIRECTION_TOP) {
         this.$emit('onScrollDown');
       }
+      if (going === this.$waypointMap.GOING_IN) {
+        this.$emit('onE1In');
+      }
+      if (going === this.$waypointMap.GOING_OUT) {
+        this.$emit('onE1Out');
+      }
     }
   },
   computed: {}

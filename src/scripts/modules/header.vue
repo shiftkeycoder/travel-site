@@ -29,9 +29,10 @@
           </div><!--btn container-->
           <nav class="primary-nav primary-nav--pull-right">
             <ul>
-              <li><a href="#our-beginning" id="our-beginning-link">Our beginning</a></li>
-              <li><a href="#features" id="features-link">Features</a></li>
-              <li><a href="#testimonials" id="testimonials-link">Testimonials</a></li>
+              <li><a href="/"><i class="fad fa-home"></i> Home</a></li>
+              <li :class="{active: ABOUT_LNK, inactive: !ABOUT_LNK}"><a href="#our-beginning" id="our-beginning-link"><i class="fad fa-info-circle"></i> Our beginning</a></li>
+              <li :class="{active: FEATURE_LNK, inactive: !FEATURE_LNK}"><a href="#features" id="features-link"><i class="fad fa-cog"></i> Features</a></li>
+              <li :class="{active: TESTIMONIAL_LNK, inactive: !TESTIMONIAL_LNK}"><a href="#testimonials" id="testimonials-link"><i class="fad fa-medal"></i> Testimonials</a></li>
             </ul>
           </nav><!--primary nav-->
         </div><!--site header menu content-->
@@ -47,11 +48,12 @@
 @import '../../styles/modules/btn';
 @import '../../styles/modules/site-header';
 @import '../../styles/modules/primary-nav';
+@import '../../styles/modules/active';
 </style>
 
 <script>
   export default {
-    props: ['HEADER_BG'],
+    props: ['HEADER_BG', 'ABOUT_LNK', 'FEATURE_LNK', 'TESTIMONIAL_LNK'],
     data() {
       return {
        mobileMenu: false

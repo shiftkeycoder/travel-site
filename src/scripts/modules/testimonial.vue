@@ -95,6 +95,10 @@
         if (going === this.$waypointMap.GOING_IN) {
           this.testimonial.isHidden = false;
           this.testimonial.isActive = true;
+          this.$emit('onE3In');
+        }
+        if (going === this.$waypointMap.GOING_OUT) {
+          this.$emit('onE3Out');
         }
       }
   }
