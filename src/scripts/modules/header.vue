@@ -2,8 +2,8 @@
   <header 
     class="site-header"
     :class="{
-      'site-header--light': !STATUS,
-      'site-header--dark': STATUS}">
+      'site-header--light': !HEADER_BG,
+      'site-header--dark': HEADER_BG}">
     <div class="wrapper">
         <div class="site-header--logo">
           <div class="site-header--logo--graphic icon--clear-view-escapes">
@@ -19,7 +19,7 @@
 
         <div class="site-header--menu-content">
           <div class="site-header--btn-container">
-            <a href="#" class="btn open-modal">Get in Touch</a>
+            <a @click="openModal" href="#" class="btn open-modal">Get in Touch</a>
           </div><!--btn container-->
           <nav class="primary-nav primary-nav--pull-right">
             <ul>
@@ -45,10 +45,15 @@
 
 <script>
   export default {
-    props: ['STATUS'],
+    props: ['HEADER_BG'],
     data() {
       return {
        
+      }
+    },
+    methods: {
+      openModal() {
+        this.$emit('onModal');
       }
     }
   }

@@ -1,14 +1,18 @@
 <template>
   <div>
-    <app-header :STATUS="status"></app-header>
+    <app-header 
+      :HEADER_BG="headerBG"
+      @onModal="modal = true"></app-header>
     <app-hero></app-hero>
     <app-about
-      @onScrollUp="status = false"
-      @onScrollDown="status = true"></app-about>
+      @onScrollUp="headerBG = false"
+      @onScrollDown="headerBG = true"></app-about>
     <app-feature></app-feature>
     <app-testimonial></app-testimonial>
-    <app-footer></app-footer>
-    <app-modal></app-modal>
+    <app-footer @onModal="modal = true" ></app-footer>
+    <app-modal 
+      :MODAL="modal"
+      @onCloseModal="modal = false"></app-modal>
   </div>
 </template>
 <style>
@@ -43,7 +47,8 @@ import appModal from '../modules/modal.vue';
 export default {
   data() {
     return {
-      status : false
+      headerBG : false,
+      modal: false
      }
   },
   components: {

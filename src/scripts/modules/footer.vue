@@ -4,7 +4,7 @@
       <p>
         <span class="site-footer--text">
             Copyright &copy; 2020 Clear View Escapes. All rights reserved.
-        </span> <a href="#" class="btn btn--orange open-modal">Get in Touch</a>
+        </span> <a @click="openModal" href="#" class="btn btn--orange">Get in Touch</a>
       </p>
     </div><!--wrapper-->
   </footer><!--footer-->
@@ -15,3 +15,13 @@
   @import '../../styles/base/macro';
   @import '../../styles/modules/site-footer';
 </style>
+
+<script>
+export default {
+  methods: {
+    openModal() {
+      this.$emit('onModal');
+    }
+  }
+}
+</script>
