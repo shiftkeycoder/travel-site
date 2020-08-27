@@ -26,6 +26,9 @@
 @import "../../styles/fonts/solid";
 @import "../../styles/fonts/svg-with-js";
 @import "../../styles/fonts/v4-shims";
+
+/* ---CUSTOM STYLE RULES--- */
+@import "../../styles/modules/reveal";
 </style>
 <script>
 import appHeader from "../modules/header.vue";

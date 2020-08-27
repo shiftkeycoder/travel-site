@@ -1,0 +1,23 @@
+.reveal {
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @keyframes fadeOut {
+    0% {opacity:1;}
+    100% {opacity:0;}
+  }
+  &--hidden {
+    opacity: 0;
+  }
+  &--fade-in {
+    transition-property: opacity;
+    transition-duration: 1s;
+    animation: fadeIn ease-in 1s;
+  }
+  &--fade-out {
+    transition-property: opacity;
+    transition-duration: 1s;
+    animation: fadeOut ease-out 1s;
+  }
+}

@@ -1,10 +1,16 @@
 <template>
-  <section id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials lazyload"  data-matching-link="#testimonials-link">
+  <section 
+    id="testimonials" 
+    class="page-section page-section--no-b-padding-until-large page-section--testimonials lazyload"  
+    data-matching-link="#testimonials-link"
+    v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
     <div class="wrapper wrapper--no-padding-until-large">
       <h2 class="section-title section-title--blue">
         <span class="icon icon--comment section-title--icon"></span>
             Real <strong>Testimonials</strong></h2>
-        <div class="row row--gutters row--gutters-small row--equal-height-at-large row--t-padding generic-content-container">
+        <div 
+          class="row row--gutters row--gutters-small row--equal-height-at-large row--t-padding generic-content-container"
+          :class="{'reveal--hidden': testimonial.isHidden,'reveal--fade-in': testimonial.isActive}">
           <div class="row--large-4">
               <div class="testimonial">
                 <div class="testimonial--photo">
@@ -57,3 +63,31 @@
   @import '../../styles/base/macro';
   @import '../../styles/modules/testimonial';
 </style>
+
+<script>
+  export default {
+    data() {
+     return {
+        intersectionOptions: {
+          root: null,
+          rootMargin: '0px 0px 0px 0px',
+          threshold: [0.50, 0.75] // [0.25, 0.75] if you want a 25% offset!
+        }, // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+        testimonial: {
+          isHidden:true,
+          isActive: false
+        }
+     }
+    },
+    methods: {
+      onWaypoint ({ going, direction }) {
+        // going: in, out
+        // direction: top, right, bottom, left
+        if (going === this.$waypointMap.GOING_IN) {
+          this.testimonial.isHidden = false;
+          this.testimonial.isActive = true;
+        }
+      }
+  }
+  }
+</script>
