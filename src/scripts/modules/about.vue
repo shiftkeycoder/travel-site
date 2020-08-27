@@ -13,8 +13,10 @@
         headline--b-margin-large">
             Ever since, we&rsquo;ve been working to make travel <b>better for everyone</b>.
       </h3>
-      <div class="wrapper wrapper--medium wrapper--b-margin">
-        <img class="lazyload" sizes="(min-width: 976px) 976px, 100vw"
+      <div 
+        class="wrapper wrapper--medium wrapper--b-margin"
+        v-lazy-container="{selector: 'img'}">
+        <img data-src="images/first-trip.jpg" sizes="(min-width: 976px) 976px, 100vw"
         srcset="images/first-trip.jpg 976w, images/first-trip-hi-dpi.jpg 1952w"
         alt="Couple walking down a street.">
       </div><!--wrapper-->
@@ -23,14 +25,14 @@
         v-waypoint="{ active: true, callback: aboutWaypoint, options: intersectionOptions }"></div>
       <div class="row row--gutters">
         <div class="row--medium-4 row--medium-4--larger row--b-margin-until-medium">
-          <picture>
+          <picture v-lazy-container="{selector: 'img'}">
             <source sizes="404px"
               srcset="images/our-start.jpg 404w, images/our-start-hi-dpi.jpg 808w"
               media="(min-width: 1020px)">
             <source sizes="320px"
               srcset="images/our-start-portrait.jpg 382w, images/our-start-portrait-hi-dpi.jpg 764w"
               media="(min-width: 800px)">
-            <img class="lazyload"  srcset="images/our-start-landscape.jpg 800w, images/our-start-landscape-hi-dpi.jpg 1600w"                    
+            <img data-src="images/our-start-landscape.jpg"  srcset="images/our-start-landscape.jpg 800w, images/our-start-landscape-hi-dpi.jpg 1600w"                    
               alt="Our founder, Jane Doe" >
           </picture>
         </div><!--row medium 4-->

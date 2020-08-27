@@ -1,8 +1,10 @@
 import Vue from "./Vue";
 import App from "./App.vue";
 import VueWaypoint from 'vue-waypoint';
+import VueLazyload from 'vue-lazyload';
 
 Vue.use(VueWaypoint);
+Vue.use(VueLazyload);
 export default class Engine {
   constructor() {
   }
