@@ -1,8 +1,10 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header :STATUS="status"></app-header>
     <app-hero></app-hero>
-    <app-about></app-about>
+    <app-about
+      @onScrollUp="status = false"
+      @onScrollDown="status = true"></app-about>
     <app-feature></app-feature>
     <app-testimonial></app-testimonial>
     <app-footer></app-footer>
@@ -38,12 +40,11 @@ import appFeature from '../modules/feature.vue';
 import appTestimonial from '../modules/testimonial.vue';
 import appFooter from '../modules/footer.vue';
 import appModal from '../modules/modal.vue';
-
 export default {
   data() {
     return {
-      msg: "Hello World",
-    };
+      status : false
+     }
   },
   components: {
     "app-header": appHeader,

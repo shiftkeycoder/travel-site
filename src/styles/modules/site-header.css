@@ -16,6 +16,9 @@
     &--dark{
       background-color: rgba(23, 51, 71, 0.85);
     }
+    &--light{
+      background-color: rgba($blue,0.55);
+    }
   }
 
   &--btn-container{

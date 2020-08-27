@@ -1,5 +1,8 @@
 <template>
-  <section id="our-beginning" class="page-section" data-matching-link="#our-beginning-link">
+  <section 
+    id="our-beginning" 
+    class="page-section" 
+    data-matching-link="#our-beginning-link">
     <div class="wrapper">
       <h2 class="headline headline--centered headline--light headline--b-margin-small">
           The first trip we planned <b>was our own</b>.
@@ -15,6 +18,9 @@
         srcset="images/first-trip.jpg 976w, images/first-trip-hi-dpi.jpg 1952w"
         alt="Couple walking down a street.">
       </div><!--wrapper-->
+      <div 
+        id="about-waypoint" 
+        v-waypoint="{ active: true, callback: aboutWaypoint, options: intersectionOptions }"></div>
       <div class="row row--gutters">
         <div class="row--medium-4 row--medium-4--larger row--b-margin-until-medium">
           <picture>
@@ -63,3 +69,31 @@
   @import '../../styles/modules/headline';
   @import '../../styles/modules/generic-content';
 </style>
+
+<script>
+  export default {
+    data() {
+    return {
+       // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+      intersectionOptions: {
+        root: null,
+        rootMargin: '0px 0px 0px 0px',
+        threshold: [0.10, 0.90]// [0.25, 0.75] if you want a 25% offset!
+      }  
+     }
+  },
+  methods: {
+     aboutWaypoint ({ going, direction }) {
+      // going: in, out
+      // direction: top, right, bottom, left
+      if (direction === this.$waypointMap.DIRECTION_BOTTOM) {
+        this.$emit('onScrollUp');
+      }
+      if (direction === this.$waypointMap.DIRECTION_TOP) {
+        this.$emit('onScrollDown');
+      }
+    }
+  },
+  computed: {}
+  }
+</script>

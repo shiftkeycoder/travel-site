@@ -1,8 +1,10 @@
 <template>
  <section 
   id="features" class="page-section page-section--blue" 
-  data-matching-link="#features-link" 
-  v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+  data-matching-link="#features-link">
+  <div 
+    id="feature-waypoint"
+    v-waypoint="{ active: true, callback: featureWaypoint, options: intersectionOptions }"></div>
   <div class="wrapper">
     <h2 
       class="section-title">
@@ -59,7 +61,7 @@
         intersectionOptions: {
           root: null,
           rootMargin: '0px 0px 0px 0px',
-          threshold: [0.50, 0.75] // [0.25, 0.75] if you want a 25% offset!
+          threshold: [0.90, 0.10] // [0.25, 0.75] if you want a 25% offset!
         }, // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
         feature: {
           isHidden:true,
@@ -68,7 +70,7 @@
      }
     },
     methods: {
-      onWaypoint ({ going, direction }) {
+      featureWaypoint ({ going, direction }) {
         // going: in, out
         // direction: top, right, bottom, left
         if (going === this.$waypointMap.GOING_IN) {

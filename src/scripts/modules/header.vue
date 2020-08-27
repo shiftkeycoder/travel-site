@@ -1,5 +1,9 @@
 <template>
-  <header class="site-header">
+  <header 
+    class="site-header"
+    :class="{
+      'site-header--light': !STATUS,
+      'site-header--dark': STATUS}">
     <div class="wrapper">
         <div class="site-header--logo">
           <div class="site-header--logo--graphic icon--clear-view-escapes">
@@ -41,6 +45,11 @@
 
 <script>
   export default {
-    
+    props: ['STATUS'],
+    data() {
+      return {
+       
+      }
+    }
   }
 </script>

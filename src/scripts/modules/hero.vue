@@ -1,5 +1,6 @@
 <template>
-  <section class="large-hero">
+  <section 
+    class="large-hero">
     <picture>
         <source
           srcset="images/hero--large.jpg 1920w, images/hero--large-hi-dpi.jpg 3840w"
@@ -34,6 +35,13 @@
 
 <script>
 export default {
-  
+ data() {
+    return {
+     
+    }
+  },
+  methods: {
+   
+  } 
 }
 </script>
